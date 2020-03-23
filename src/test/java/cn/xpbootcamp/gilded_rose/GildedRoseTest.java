@@ -10,5 +10,7 @@ class GildedRoseTest {
         GildedRose gildedRose = new GildedRose(items);
         gildedRose.updateQuality();
         assertEquals(0, items[0].quality);
+        gildedRose.updateQuality();
+        assertEquals(0, items[0].quality);
     }
 }
