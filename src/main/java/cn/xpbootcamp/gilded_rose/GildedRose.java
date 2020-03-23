@@ -10,7 +10,7 @@ public class GildedRose {
 
     public void updateQuality() {
         for(Item item: items) {
-            if ("Aged Brie".equals(item.name)) {
+            if (ItemName.AGED_BRIE.equals(item.name)) {
                 item.quality = item.quality == 50 ? 50 : item.quality + 1;
             } else {
                 item.quality = item.quality > 0 ? item.quality - 1 : 0;
