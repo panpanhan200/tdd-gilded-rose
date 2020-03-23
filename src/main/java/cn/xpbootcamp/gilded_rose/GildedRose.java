@@ -10,7 +10,11 @@ public class GildedRose {
 
     public void updateQuality() {
         for(Item item: items) {
-            item.quality = item.quality > 0 ? item.quality - 1 : 0;
+            if ("Aged Brie".equals(item.productName)) {
+                item.quality = item.quality == 50 ? 50 : item.quality + 1;
+            } else {
+                item.quality = item.quality > 0 ? item.quality - 1 : 0;
+            }
         }
     }
 }
